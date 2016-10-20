@@ -7,21 +7,17 @@ def nonlin(x,deriv=False):
     return 1/(1+np.exp(-x))
     
 # input dataset
-X = np.array([  [0,0,1,1,2,2,3],
-                [10,1,11,2,12,3,13],  
-                [0,0,1,1,2,2,4],
-                [10,1,11,2,12,3,14],
-                [10,5,13,11,14,13,18]]);
+X = np.array([ [1,2,3]]);
 
 # output dataset            
-y = np.array([[3,4,4,5,21]]).T
+y = np.array([[4]]).T
 
 # seed random numbers to make calculation
 # deterministic (just a good practice)
 np.random.seed(1)
 
 # initialize weights randomly with mean 0
-syn0 = 2*np.random.random((7,1)) - 1
+syn0 = 2*np.random.random((3,1)) - 1
 
 for iter in range(10):
     print ("Run" + str(iter))
